@@ -205,3 +205,200 @@ body {
 .account-actions a:hover {
     color: var(--primary);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   LOWER HEADER
+========================= */
+
+.lower-header {
+    border-bottom: 1px solid var(--border);
+    background-color: var(--white);
+}
+
+.lower-header .container {
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category-wrapper {
+    position: relative;
+
+    min-width: 220px;
+}
+
+.category-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 220px;
+    height: 40px;
+
+    padding: 0 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    background-color: var(--white);
+    color: var(--text);
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    border-color: var(--primary);
+}
+
+.menu-icon {
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.category-title {
+    flex: 1;
+    text-align: left;
+}
+
+.arrow-icon {
+    font-size: 16px;
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.category-dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+
+    width: 220px;
+    max-height: 250px;
+
+    overflow-y: auto;
+
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    display: none;
+    z-index: 999;
+}
+
+.category-dropdown.show {
+    display: block;
+}
+
+.category-dropdown.show {
+    display: block;
+}
+
+.category-item {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: none;
+    border-bottom: 1px solid #eee;
+
+    background-color: var(--white);
+    color: var(--text);
+
+    text-align: left;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.category-item:last-child {
+    border-bottom: none;
+}
+
+.category-item:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+}
+
+.category-item.active {
+    color: var(--primary);
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav a {
+    display: block;
+
+    padding: 10px 15px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border-radius: 5px;
+
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+}
+
+
+/* =========================
+   HEADER INFO
+========================= */
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+.header-info svg {
+    color: var(--primary);
+    font-size: 18px;
+}
