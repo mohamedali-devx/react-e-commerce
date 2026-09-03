@@ -187,7 +187,6 @@ function Header() {
 
               {/* All Categories */}
               <button
-                type="button"
                 className={`category-item ${selectedCategory === "all" ? "active" : ""
                   }`}
                 onClick={() => handleCategory("all")}
