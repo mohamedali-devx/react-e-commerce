@@ -194,7 +194,7 @@ function Header() {
               <button
                 className={`category-item ${selectedCategory === "all" ? "active" : ""
                   }`}
-                onClick={() => handleCategory("all")}
+              // onClick={() => handleCategory("all")}
               >
                 All Categories
               </button>
@@ -207,7 +207,7 @@ function Header() {
                   key={category.slug}
                   className={`category-item ${selectedCategory === category.slug ? "active" : ""
                     }`}
-                  onClick={() => handleCategory(category.slug)}
+                // onClick={() => handleCategory(category.slug)}
                 >
                   {category.name}
                 </button>

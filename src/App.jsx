@@ -3,6 +3,7 @@ import ProductDetails from './pages/ProductDetails/ProductDetails'
 import Header from './components/Header/Header'
 import { Route, Routes } from 'react-router-dom'
 import Cart from './pages/cart/Cart'
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
         <Route path='/cart' element={<Cart />}></Route>
         <Route path='/products/:id' element={<ProductDetails />}></Route>
       </Routes>
+
+      <Footer />
     </>
   )
 }

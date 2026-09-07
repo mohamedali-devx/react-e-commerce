@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+
 import {
     FaStar,
     FaRegStarHalfStroke,
     FaRegHeart,
     FaShare
 } from "react-icons/fa6";
+
 import { TiShoppingCart } from 'react-icons/ti';
 
 import './productDetails.css';
@@ -13,10 +15,17 @@ import Button from '../../components/Button/Button';
 import SlideProducts from '../../components/SlideProducts/SlideProducts';
 import LoadingSkeleton from '../../components/LoadingSkeleton/LoadingSkeleton';
 
+import { CartContext } from '../../components/context/CartContext';
+
 
 function ProductDetails() {
 
     const { id } = useParams();
+
+    const navigate = useNavigate();
+
+    const { addToCart } = useContext(CartContext);
+
 
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -91,6 +100,16 @@ function ProductDetails() {
     }, [product]);
 
 
+    // Add To Cart
+    const handleAddToCart = () => {
+
+        addToCart(product);
+
+        navigate("/cart");
+
+    };
+
+
     if (loading) {
         return <LoadingSkeleton />;
     }
@@ -103,11 +122,13 @@ function ProductDetails() {
 
     return (
         <>
+
             <div className="item-details">
 
                 <div className="container">
 
                     {/* Images */}
+
                     <div className="imgs-item">
 
                         <div className="main-img">
@@ -142,6 +163,7 @@ function ProductDetails() {
 
 
                     {/* Product Details */}
+
                     <div className="details-item">
 
                         <h1 className="name">
@@ -201,6 +223,7 @@ function ProductDetails() {
                         <Button
                             txt="Add To Cart"
                             icon={<TiShoppingCart />}
+                            onClick={handleAddToCart}
                         />
 
 
@@ -226,7 +249,9 @@ function ProductDetails() {
             {/* Related Products */}
 
             {loadingRelatedProducts ? (
+
                 <div>loading...</div>
+
             ) : (
 
                 <SlideProducts

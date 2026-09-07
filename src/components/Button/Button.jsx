@@ -1,9 +1,9 @@
 import './button.css'
 
-function Button({ txt, icon, className }) {
+function Button({ txt, icon, className, onClick }) {
   return (
     <>
-      <button className={`btn ${className}`}>
+      <button onClick={onClick} className={`btn ${className}`}>
         {txt}
         {icon}
       </button>
