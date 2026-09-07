@@ -19,6 +19,11 @@ body {
 .header {
     width: 100%;
     background-color: var(--white);
+    /* position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0; */
 }
 
 /* =========================

@@ -1,5 +1,5 @@
-import HeroSlider from '../components/Hero/HeroSlider'
-import SlideProducts from '../components/SlideProducts/SlideProducts'
+import HeroSlider from '../../components/Hero/HeroSlider'
+import SlideProducts from '../../components/SlideProducts/SlideProducts'
 
 import { useEffect, useState } from 'react'
 

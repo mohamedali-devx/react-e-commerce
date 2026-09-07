@@ -128,3 +128,38 @@ svg {
         color: var(--white_color);
     }
 }
+
+
+.product.in-cart {
+    border: 2px solid #2563eb;
+    ;
+}
+
+
+.cart-added svg {
+    transform: scale(1.1);
+}
+
+.cart-added {
+    color: #2563eb !important;
+}
+
+.product {
+    position: relative;
+}
+
+.in-cart-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+
+    background: #2563eb;
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+}

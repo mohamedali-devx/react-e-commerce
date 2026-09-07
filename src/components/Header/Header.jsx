@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./header.css";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -15,6 +15,7 @@ import { FaRegHeart, FaRegUser, FaUserPlus } from "react-icons/fa";
 import { PiSignInBold } from "react-icons/pi";
 
 import logo from "../../images/Logo.jpg";
+import { CartContext } from "../context/CartContext";
 
 function Header() {
   const navigate = useNavigate();
@@ -67,6 +68,10 @@ function Header() {
       : categories.find(
         (category) => category.slug === selectedCategory
       )?.name || "All Categories";
+
+
+
+  const { cartItems } = useContext(CartContext);
 
   return (
     <header className="header">
@@ -125,7 +130,7 @@ function Header() {
 
               <div className="action-icon">
                 <IoCartOutline />
-                <span className="count">0</span>
+                <span className="count">{cartItems.length}</span>
               </div>
 
               <span className="action-text">

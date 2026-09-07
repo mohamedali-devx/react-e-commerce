@@ -11,6 +11,7 @@ import { TiShoppingCart } from 'react-icons/ti';
 import './productDetails.css';
 import Button from '../../components/Button/Button';
 import SlideProducts from '../../components/SlideProducts/SlideProducts';
+import LoadingSkeleton from '../../components/LoadingSkeleton/LoadingSkeleton';
 
 
 function ProductDetails() {
@@ -91,7 +92,7 @@ function ProductDetails() {
 
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <LoadingSkeleton />;
     }
 
 
@@ -225,9 +226,7 @@ function ProductDetails() {
             {/* Related Products */}
 
             {loadingRelatedProducts ? (
-
-                <p>Loading related products...</p>
-
+                <div>loading...</div>
             ) : (
 
                 <SlideProducts
