@@ -8,19 +8,22 @@ function Product({ product }) {
     return (
         <>
             <div className="product">
-                <div className="img-product">
-                    <img src={product.images[0]} alt={product.name} />
-                </div>
+                <Link to={`products/${product.id}`}>
 
-                <p className="name-product">{product.name}</p>
+                    <div className="img-product">
+                        <img src={product.images[0]} alt={product.name} />
+                    </div>
 
-                <div className="stars">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaRegStarHalfStroke />
-                </div>
+                    <p className="name-product">{product.name}</p>
+
+                    <div className="stars">
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaRegStarHalfStroke />
+                    </div>
+                </Link>
 
                 <div className="price"><span>${product.price.toFixed(2)}</span></div>
                 <div className="icons">

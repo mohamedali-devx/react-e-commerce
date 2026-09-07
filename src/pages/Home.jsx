@@ -1,5 +1,3 @@
-import Header from '../components/Header/Header'
-
 import HeroSlider from '../components/Hero/HeroSlider'
 import SlideProducts from '../components/SlideProducts/SlideProducts'
 
@@ -43,7 +41,6 @@ function Home() {
 
   return (
     <>
-      <Header />
       <HeroSlider />
 
       {loading ? (
