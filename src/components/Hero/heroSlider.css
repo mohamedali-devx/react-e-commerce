@@ -1,0 +1,80 @@
+:root {
+    --primary: #007bff;
+    --primary-dark: #0069d9;
+    --primary-light: #eaf4ff;
+
+    --text: #253237;
+    --text-light: #777;
+
+    --white: #ffffff;
+    --bg: #f7f8fa;
+    --border: #e4e7eb;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    --transition: 0.25s ease;
+}
+
+
+.hero {
+    padding: 30px 0;
+
+}
+
+.hero .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.hero-slider {
+    width: 100%;
+    height: 450px;
+}
+
+.hero-slider .swiper-slide {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hero-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+}
+
+.content h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.content h2 {
+    margin: 0 0 10px;
+    font-size: 40px;
+    color: var(--primary);
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0069d9;
+}
