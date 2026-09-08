@@ -9,6 +9,7 @@ const categories = [
   "laptops",
   "tablets",
   "sunglasses",
+  "vehicle"
 ]
 
 
@@ -20,10 +21,10 @@ function Home() {
     const fetchProducts = async () => {
       try {
         const results = await Promise.all(
-          categories.map(async (category) => {
-            const res = await fetch(`https://dummyjson.com/products/category/${category}`);
-            const data = await res.json();
-            return { [category]: data.products };
+          categories.map(async (item, index) => {
+            const r = await fetch(`https://dummyjson.com/products/category/${item}`);
+            const d = await r.json();
+            return { [item]: d.products };
           })
         )
         const productsData = Object.assign({}, ...results);

@@ -98,7 +98,7 @@
     flex-direction: column;
     right: -50px;
     gap: 10px;
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
 .product:hover .icons {

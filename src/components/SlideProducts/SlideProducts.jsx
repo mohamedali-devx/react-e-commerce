@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
+
 function SlideProducts({ data, title }) {
 
 
